@@ -1,0 +1,60 @@
+{% extends 'default.html' %}
+{% load static %}
+{% block content %}
+
+	<div class="section-header">
+          <h2 class="section-title text-center wow fadeInDown">my tour</h2>
+          <p class="text-center wow fadeInDown">For information regarding my World Tour, show date, time, venue and others check out here.<br>Don't forget to bring your family along with you.</p>
+    </div>
+    
+    <section id="testimonial" style="background-image:url({% static 'images/photos/bg.jpg' %});">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+
+                    <div id="carousel-testimonial" class="carousel slide text-center" data-ride="carousel">
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <p><img class="img-circle img-thumbnail" src="{% static 'images/photos/p (13).jpg' %}" height="88" width="88" alt=""></p>
+                                <h4>Hyderabad</h4>
+                                <small>Marshmello Tour Of India</small>
+                                Rajiv Gandhi Stadium, Hyderabad <br>
+                                Sat, 12 Dec | 9:00 pm
+                            </div>
+                            <div class="item">
+                                <p><img class="img-circle img-thumbnail" src="{% static 'images/photos/p (13).jpg' %}" height="88" width="88" alt=""></p>
+                                <h4>New York</h4>
+                                <small>Marshmello Tour Of United States</small>
+                                Rumsey Playfield, NY <br>
+                                Fri, 30 Aug | 7:30 pm 
+                            </div>
+                            <div class="item">
+                                <p><img class="img-circle img-thumbnail" src="{% static 'images/photos/p (13).jpg' %}" height="88" width="88" alt=""></p>
+                                <h4>Hampton</h4>
+                                <small>Marshmello Tour Of United States</small>
+                                Atlanta Motor Speedway, GA <br>
+                                Fri, 20 Sep | 8:34 pm 
+                            </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <div class="btns">
+                            <a class="btn btn-primary btn-sm" href="#carousel-testimonial" role="button" data-slide="prev">
+                                <span class="fa fa-angle-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="btn btn-primary btn-sm" href="#carousel-testimonial" role="button" data-slide="next">
+                                <span class="fa fa-angle-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+
+                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/#testimonial-->
+
+{% endblock %}

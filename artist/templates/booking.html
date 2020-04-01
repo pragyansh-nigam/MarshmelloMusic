@@ -1,0 +1,212 @@
+{% extends 'default.html' %}
+{% load static %}
+
+{% block content %}
+
+	<section>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">Concert Booking</h2> <br><br><br>
+                
+                <div class="item active">
+                    <p><img class="img-circle img-thumbnail" src="{% static 'images/photos/p (13).jpg' %}" height="88" width="88" alt=""></p>
+                    <a href="#hyderabad"><h4>Hyderabad</h4></a>
+                    <small>Marshmello Tour Of India</small> <br>
+                    Rajiv Gandhi Stadium, Hyderabad <br>
+                    Sat, 12 Dec | 9:00 pm
+                </div>
+            	
+            	<div class="item" align="center">
+                    <p><img class="img-circle img-thumbnail" src="{% static 'images/photos/p (13).jpg' %}" height="88" width="88" alt=""></p>
+                    <a href="#ny"><h4>New York</h4></a>
+                    <small>Marshmello Tour Of United States</small> <br>
+                    Rumsey Playfield, NY <br>
+                    Fri, 30 Aug | 7:30 pm 
+                </div>
+                            
+                <div class="item" align="right">
+                <p><img class="img-circle img-thumbnail" src="{% static 'images/photos/p (13).jpg' %}" height="88" width="88" alt=""></p>
+                <a href="#hampton"><h4>Hampton</h4></a>
+                <small>Marshmello Tour Of United States</small> <br>
+                Atlanta Motor Speedway, GA <br>
+                Fri, 20 Sep | 8:34 pm 
+                </div>
+            
+            </div>
+        </div>
+    </section><!--/#get-in-touch-->
+
+
+    <section id="get-in-touch">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown" id="hyderabad">Hyderabad Concert</h2>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3256.8632162567756!2d78.54828171435351!3d17.406531306835465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9938ea05531b%3A0xcc8b7a858c63d5bb!2sRajiv%20Gandhi%20International%20Cricket%20Stadium%2C%20Hyderabad!5e1!3m2!1sen!2sin!4v1585736074969!5m2!1sen!2sin" width="1400" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <div class="container-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-8">
+                        <div class="contact-form">
+                            <h3>Book Tickets</h3>
+
+                            <address>
+                              <strong>Marshmello Music, Inc.</strong><br>
+                              Rajiv Gandhi Stadium, Gate 3<br>
+                              Hyderabad, India 07405<br>
+                              Sat, 12 Dec | 9:00 pm
+                            </address>
+
+                            <form method="post" action="/artist/booking">
+                                
+                                {% csrf_token %}
+                                
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-control" placeholder="Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" pattern="[0-9]{5}-[0-9]{5}" name="phone" class="form-control" placeholder="Mobile" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control" placeholder="Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="city" class="form-control" placeholder="Concert City" required>
+                                </div>
+                                <div class="form-group">
+                                    Available Tickets : &nbsp; <select><option>--Select--</option>
+								 								<option>Rs. 7,499</option>
+								 								<option>Rs. 5,999</option>
+								 								<option>Rs. 3,999</option>
+								 								<option>Rs. 1,499</option>
+								 					    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Buy Tickets</button>              
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/#bottom-->
+
+    <section id="get-in-touch">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown" id="ny">New York Concert</h2>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2584.8157559242445!2d-73.9724029850935!3d40.77258554184472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258ed4ea799c3%3A0xfc8d6ea32e436367!2sRumsey%20Playfield!5e1!3m2!1sen!2sin!4v1585736392030!5m2!1sen!2sin" width="1400" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <div class="container-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-8">
+                        <div class="contact-form">
+                            <h3>Book Tickets</h3>
+
+                            <address>
+                              <strong>Marshmello Music, Inc.</strong><br>
+                              Rumsey Playfield <br>
+                              New York, CA 94107<br>
+                              Fri, 30 Aug | 7:30 pm
+                            </address>
+
+                            <form method="post" action="/artist/booking">
+                                
+                                {% csrf_token %}
+                                
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-control" placeholder="Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="phone" class="form-control" placeholder="Mobile" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control" placeholder="Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="city" class="form-control" placeholder="Concert City" required>
+                                </div>
+                                <div class="form-group">
+                                    Available Tickets : &nbsp; <select><option>--Select--</option>
+								 								<option>250$</option>
+								 								<option>200$</option>
+								 								<option>150$</option>
+								 					    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Buy Tickets</button> 
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/#bottom-->
+
+    <section id="get-in-touch">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown" id="hampton">Hampton Concert</h2>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.9329282832687!2d-84.3185011853192!3d33.3859847599933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f4f432cc020fb7%3A0xaa9219571f826eeb!2sAtlanta%20Motor%20Speedway!5e1!3m2!1sen!2sin!4v1585736467504!5m2!1sen!2sin" width="1400" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <div class="container-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-8">
+                        <div class="contact-form">
+                            <h3>Book Tickets</h3>
+
+                            <address>
+                              <strong>Marshmello Music, Inc.</strong><br>
+                              Atlanta Motor Speedway <br>
+                              Hampton, GA 94123<br>
+                              Fri, 20 Sep | 8:34 pm
+                            </address>
+
+                            <form method="post" action="/artist/booking">
+                                
+                                {% csrf_token %}
+                                
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-control" placeholder="Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="phone" class="form-control" placeholder="Mobile" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control" placeholder="Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="city" class="form-control" placeholder="Concert City" required>
+                                </div>
+                                <div class="form-group">
+                                    Available Tickets : &nbsp; <select><option>--Select--</option>
+								 								<option>250$</option>
+								 								<option>200$</option>
+								 								<option>150$</option>
+								 					    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Buy Tickets</button> 
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/#bottom-->
+
+{% endblock %}

@@ -1,0 +1,102 @@
+{% extends 'default.html' %}
+{% load static %}
+
+{% block content %}
+
+    <section id="get-in-touch">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">Contact</h2>
+                <p class="text-center wow fadeInDown">For any queries regarding event description, world tours, upcoming releases or meet and greet, contact me here.<br>Feel free to contact, my management team will help you out.</p>
+            </div>
+        </div>
+    </section><!--/#get-in-touch-->
+
+
+    <section id="contact">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2698.3444349326833!2d-122.41712558519086!3d37.76122572071284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e349651fcc9%3A0x62827d68e0ff4bdb!2sFolsom%20St%2C%20San%20Francisco%2C%20CA%2C%20USA!5e1!3m2!1sen!2sin!4v1585736728232!5m2!1sen!2sin" width="1400" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>        
+        <div class="container-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-8">
+                        <div class="contact-form">
+                            <h3>Contact Info</h3>
+
+                            <address>
+                              <strong>Marshmello Music, Inc.</strong><br>
+                              795 Folsom Ave, Suite 600<br>
+                              San Francisco, CA 94107<br>
+                              <abbr title="Phone">P:</abbr> (123) 456-7890 
+                              &nbsp;&nbsp;
+                              <!-- Button trigger modal -->
+                              <button style="border-radius:50%;" onclick="sendNI('','','')" type="button" class="btn btn-primary" data-toggle="modal" data-target="#pro40"><i class="fa fa-phone"></i></button>
+                              
+                              <!-- Modal -->
+                                        <div class="modal fade" id="pro40" tabindex="-1" role="dialog"
+                                            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div>
+                                                        <h5 class="modal-title" id="exampleModalCenterTitle"
+                                                            style="text-align:center; width:100%;">Contact</h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+
+                                                    <div class="modal-body">
+                                                        <ul class="list-group list-group-flush">
+                                                            <li class="list-group-item">Name:
+                                                                Team Marshmello</li>
+                                                            <li class="list-group-item">Phno.:(123) 456-7890
+                                                            </li>
+                                                            <li class="list-group-item">
+                                                                <button class="btn btn-success btn-lg btn-block" onclick='
+                                                                window.location.href="tel:+918224981815"'>Call Now&nbsp;&nbsp;<i class="fa fa-phone"></i>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- vfd -->
+
+
+                            </address>
+
+                            <form method="post" action="/artist/contact">
+                                
+                                {% csrf_token %}
+                                
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-control" placeholder="Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control" placeholder="Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="subject" class="form-control" placeholder="Subject">
+                                </div>
+                                <div class="form-group">
+                                    <textarea type="text" name="message" class="form-control" rows="6" placeholder="Message" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                                &nbsp;&nbsp;&nbsp;
+                                {% for x in msg %}
+                                    <b style="color:green;">{{x}}</b>
+                                {% endfor %}
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/#bottom-->
+
+{% endblock %}

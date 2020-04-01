@@ -1,0 +1,1165 @@
+{% extends 'default.html' %}
+{% load static %}
+
+{% block content %}
+
+<head>
+<!--Search bar-->
+    <style type="text/css">
+        #mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style the navigation links */
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+}
+    </style> <!--End Search bar-->
+
+<!--collapsed sidepanel song 1-->
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 170px;
+  bottom: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 30px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+</style>    <!--end-->
+
+<!--collapsed sidepanel song 2-->
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 170px;
+  bottom: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 30px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+</style>    <!--end-->
+
+<!--collapsed sidepanel song 3-->
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 170px;
+  bottom: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 30px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+</style>    <!--end-->
+
+<!--collapsed sidepanel song 4-->
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 170px;
+  bottom: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 30px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+</style>    <!--end-->
+
+<!--collapsed sidepanel song 5-->
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 170px;
+  bottom: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 30px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+</style>    <!--end-->
+
+<!--collapsed sidepanel song 6-->
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 170px;
+  bottom: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 30px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+</style>    <!--end-->
+
+<!--collapsed sidepanel song 7-->
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 170px;
+  bottom: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 30px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+</style>    <!--end-->
+
+<!--collapsed sidepanel song 8-->
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 170px;
+  bottom: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 30px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+</style>    <!--end-->
+
+<!--collapsed sidepanel song 9-->
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 170px;
+  bottom: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 30px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+</style>    <!--end-->
+
+<!--collapsed sidepanel song 10-->
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 170px;
+  bottom: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 30px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+</style>    <!--end-->
+
+<!--collapsed sidepanel song 11-->
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 170px;
+  bottom: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 30px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+</style>    <!--end-->
+
+</head>
+
+<section id="meet-team">
+        <div class="container">
+            <div class="section-header" align="center">
+                <h2 class="section-title text-center wow fadeInDown">spotify music</h2>
+                <img src="{% static 'images/photos/spotify1.jpg' %}">
+            </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingThree">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Search Music
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                <div class="panel-body">
+                                    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search..." title="Search your song">
+
+                                    <ul id="myMenu">
+                                        <li><a href="#sya">See You Again</a></li>
+                                        <li><a href="#titanium">Titanium</a></li>
+                                        <li><a href="#18">18</a></li>
+                                        <li><a href="#closer">Closer</a></li>
+                                        <li><a href="#bebot">Bebot</a></li>
+                                        <li><a href="#despacito">Despacito</a></li>
+                                        <li><a href="#cold">Cold</a></li>
+                                        <li><a href="#smg">Steal My Girl</a></li>
+                                        <li><a href="#wf">Waving Flag</a></li>
+                                        <li><a href="#perfect">Perfect</a></li>
+                                        <li><a href="#monster">Monster</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> <br>
+                        
+                        <div align="center">
+                        <button type="submit" class="btn btn-primary">SHUFFLE PLAY</button>
+                        </div> <br><br><br>
+
+                        <h3 class="column-title">Singles and EPs</h3>
+                        <br>
+                        
+                        <!--song 1-->
+                        <i class="fa fa-play-circle fa-2x" aria-hidden="true">&nbsp;&nbsp;<img src="{% static 'images/photos/smg.jpg' %}" height="55" width="55">&nbsp;&nbsp;<strong id="smg" id="play1" id="pause1">Steal My Girl</strong></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <div id="mySidepanel1" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">×</a>
+  <a href="#play1" onclick="playAudio1()">Play</a>
+  <a href="#pause1" onclick="pauseAudio1()">Pause</a>
+  <a href="{% static 'audio/Steal my girl.mp3' %}" download>Download</a>
+</div>
+
+                            <audio id="audio1">
+                                    <source src="{% static 'audio/Steal my girl.mp3' %}" type="audio/mp3">
+                            </audio>
+
+                            <script>
+                                var a = document.getElementById("audio1");
+
+                                function playAudio1()
+                                {
+                                    a.play();
+                                }
+
+                                function pauseAudio1()
+                                {
+                                    a.pause();
+                                }
+                            </script>
+
+<button class="openbtn" onclick="openNav1()">☰</button>  
+&nbsp;&nbsp;Length: 00:03:48 <!--end--> <br><br>
+
+                                <!--song 2-->
+                        <i class="fa fa-play-circle fa-2x" aria-hidden="true">&nbsp;&nbsp;<img src="{% static 'images/photos/closer.jpg' %}" height="55" width="55">&nbsp;&nbsp;<strong id="closer" id="play2" id="pause2">Closer</strong></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        
+
+<div id="mySidepanel2" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">×</a>
+  <a href="#play2" onclick="playAudio2()">Play</a>
+  <a href="#pause2" onclick="pauseAudio2()">Pause</a>
+  <a href="{% static 'audio/Closer.mp3' %}" download>Download</a>
+</div>
+
+                            <audio id="audio2">
+                                    <source src="{% static 'audio/Closer.mp3' %}" type="audio/mp3">
+                            </audio>
+
+                            <script>
+                                var b = document.getElementById("audio2");
+
+                                function playAudio2()
+                                {
+                                    b.play();
+                                }
+
+                                function pauseAudio2()
+                                {
+                                    b.pause();
+                                }
+                            </script>
+
+<button class="openbtn" onclick="openNav2()">☰</button>  
+&nbsp;&nbsp;Length: 00:04:05 <!--end--> <br><br>
+
+                                  <!--song 3-->
+                        <i class="fa fa-play-circle fa-2x" aria-hidden="true">&nbsp;&nbsp;<img src="{% static 'images/photos/despacito.png' %}" height="55" width="55">&nbsp;&nbsp;<strong id="despacito" id="play3" id="pause3">Despacito</strong></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        
+
+<div id="mySidepanel3" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav3()">×</a>
+  <a href="#play3" onclick="playAudio3()">Play</a>
+  <a href="#pause3" onclick="pauseAudio3()">Pause</a>
+  <a href="{% static 'audio/Despacito.mp3' %}" download>Download</a>
+</div>
+
+                            <audio id="audio3">
+                                    <source src="{% static 'audio/Despacito.mp3' %}" type="audio/mp3">
+                            </audio>
+
+                            <script>
+                                var c = document.getElementById("audio3");
+
+                                function playAudio3()
+                                {
+                                    c.play();
+                                }
+
+                                function pauseAudio3()
+                                {
+                                    c.pause();
+                                }
+                            </script>
+
+<button class="openbtn" onclick="openNav3()">☰</button>  
+&nbsp;&nbsp;Length: 00:03:49 <!--end--> <br><br>
+
+                                  <!--song 4-->
+                        <i class="fa fa-play-circle fa-2x" aria-hidden="true">&nbsp;&nbsp;<img src="{% static 'images/photos/cold.jpg' %}" height="55" width="55">&nbsp;&nbsp;<strong id="cold" id="play4" id="pause4">Cold</strong></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        
+
+<div id="mySidepanel4" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav4()">×</a>
+  <a href="#play4" onclick="playAudio4()">Play</a>
+  <a href="#pause4" onclick="pauseAudio4()">Pause</a>
+  <a href="{% static 'audio/Cold.mp3' %}" download>Download</a>
+</div>
+
+                            <audio id="audio4">
+                                    <source src="{% static 'audio/Cold.mp3' %}" type="audio/mp3">
+                            </audio>
+
+                            <script>
+                                var d = document.getElementById("audio4");
+
+                                function playAudio4()
+                                {
+                                    d.play();
+                                }
+
+                                function pauseAudio4()
+                                {
+                                    d.pause();
+                                }
+                            </script>
+
+<button class="openbtn" onclick="openNav4()">☰</button>  
+&nbsp;&nbsp;Length: 00:03:47 <!--end--> <br><br>
+
+                                <!--song 5-->
+                        <i class="fa fa-play-circle fa-2x" aria-hidden="true">&nbsp;&nbsp;<img src="{% static 'images/photos/wf.jpg' %}" height="55" width="55">&nbsp;&nbsp;<strong id="wf" id="play5" id="pause5">Waving Flag</strong></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        
+
+<div id="mySidepanel5" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav5()">×</a>
+  <a href="#play5" onclick="playAudio5()">Play</a>
+  <a href="#pause5" onclick="pauseAudio5()">Pause</a>
+  <a href="{% static 'audio/Waving flag.mp3' %}" download>Download</a>
+</div>
+
+                            <audio id="audio5">
+                                    <source src="{% static 'audio/Waving flag.mp3' %}" type="audio/mp3">
+                            </audio>
+
+                            <script>
+                                var e = document.getElementById("audio5");
+
+                                function playAudio5()
+                                {
+                                    e.play();
+                                }
+
+                                function pauseAudio5()
+                                {
+                                    e.pause();
+                                }
+                            </script>
+
+<button class="openbtn" onclick="openNav5()">☰</button>  
+&nbsp;&nbsp;Length: 00:03:38 <!--end--> <br><br>
+
+                                  <!--song 6-->
+                        <i class="fa fa-play-circle fa-2x" aria-hidden="true">&nbsp;&nbsp;<img src="{% static 'images/photos/18.jpg' %}" height="55" width="55">&nbsp;&nbsp;<strong id="18" id="play6" id="pause6">18</strong></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        
+
+<div id="mySidepanel6" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav6()">×</a>
+  <a href="#play6" onclick="playAudio6()">Play</a>
+  <a href="#pause6" onclick="pauseAudio6()">Pause</a>
+  <a href="{% static 'audio/18.mp3' %}" download>Download</a>
+</div>
+
+                            <audio id="audio6">
+                                    <source src="{% static 'audio/18.mp3' %}" type="audio/mp3">
+                            </audio>
+
+                            <script>
+                                var f = document.getElementById("audio6");
+
+                                function playAudio6()
+                                {
+                                    f.play();
+                                }
+
+                                function pauseAudio6()
+                                {
+                                    f.pause();
+                                }
+                            </script>
+
+<button class="openbtn" onclick="openNav6()">☰</button>  
+&nbsp;&nbsp;Length: 00:04:08 <!--end--> <br><br>
+
+                                <!--song 7-->
+                        <i class="fa fa-play-circle fa-2x" aria-hidden="true">&nbsp;&nbsp;<img src="{% static 'images/photos/sya.jpg' %}" height="55" width="55">&nbsp;&nbsp;<strong id="sya" id="play7" id="pause7">See You Again</strong></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        
+
+<div id="mySidepanel7" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav7()">×</a>
+  <a href="#play7" onclick="playAudio7()">Play</a>
+  <a href="#pause7" onclick="pauseAudio7()">Pause</a>
+  <a href="{% static 'audio/See you again.mp3' %}" download>Download</a>
+</div>
+
+                            <audio id="audio7">
+                                    <source src="{% static 'audio/See you again.mp3' %}" type="audio/mp3">
+                            </audio>
+
+                            <script>
+                                var g = document.getElementById("audio7");
+
+                                function playAudio7()
+                                {
+                                    g.play();
+                                }
+
+                                function pauseAudio7()
+                                {
+                                    g.pause();
+                                }
+                            </script>
+
+<button class="openbtn" onclick="openNav7()">☰</button>  
+&nbsp;&nbsp;Length: 00:03:48 <!--end--> <br><br>
+
+                              <!--song 8-->
+                        <i class="fa fa-play-circle fa-2x" aria-hidden="true">&nbsp;&nbsp;<img src="{% static 'images/photos/bebot.jpg' %}" height="55" width="55">&nbsp;&nbsp;<strong id="bebot" id="play8" id="pause8">Bebot</strong></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        
+
+<div id="mySidepanel8" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav8()">×</a>
+  <a href="#play8" onclick="playAudio8()">Play</a>
+  <a href="#pause8" onclick="pauseAudio8()">Pause</a>
+  <a href="{% static 'audio/Bebot.mp3' %}" download>Download</a>
+</div>
+
+                            <audio id="audio8">
+                                    <source src="{% static 'audio/Bebot.mp3' %}" type="audio/mp3">
+                            </audio>
+
+                            <script>
+                                var h = document.getElementById("audio8");
+
+                                function playAudio8()
+                                {
+                                    h.play();
+                                }
+
+                                function pauseAudio8()
+                                {
+                                    h.pause();
+                                }
+                            </script>
+
+<button class="openbtn" onclick="openNav8()">☰</button>  
+&nbsp;&nbsp;Length: 00:03:29 <!--end--> <br><br>
+
+                                <!--song 9-->
+                        <i class="fa fa-play-circle fa-2x" aria-hidden="true">&nbsp;&nbsp;<img src="{% static 'images/photos/titanium.jpg' %}" height="55" width="55">&nbsp;&nbsp;<strong id="titanium" id="play9" id="pause9">Titanium</strong></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        
+
+<div id="mySidepanel9" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav9()">×</a>
+  <a href="#play9" onclick="playAudio9()">Play</a>
+  <a href="#pause9" onclick="pauseAudio9()">Pause</a>
+  <a href="{% static 'audio/Titanium.mp3' %}" download>Download</a>
+</div>
+
+                            <audio id="audio9">
+                                    <source src="{% static 'audio/Titanium.mp3' %}" type="audio/mp3">
+                            </audio>
+
+                            <script>
+                                var i = document.getElementById("audio9");
+
+                                function playAudio9()
+                                {
+                                    i.play();
+                                }
+
+                                function pauseAudio9()
+                                {
+                                    i.pause();
+                                }
+                            </script>
+
+<button class="openbtn" onclick="openNav9()">☰</button>  
+&nbsp;&nbsp;Length: 00:04:05 <!--end--> <br><br>
+
+                            <!--song 10-->
+                        <i class="fa fa-play-circle fa-2x" aria-hidden="true">&nbsp;&nbsp;<img src="{% static 'images/photos/perfect.jpg' %}" height="55" width="55">&nbsp;&nbsp;<strong id="perfect" id="play10" id="pause10">Perfect</strong></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        
+
+<div id="mySidepanel10" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav10()">×</a>
+  <a href="#play10" onclick="playAudio10()">Play</a>
+  <a href="#pause10" onclick="pauseAudio10()">Pause</a>
+  <a href="{% static 'audio/Perfect.mp3' %}" download>Download</a>
+</div>
+
+                            <audio id="audio10">
+                                    <source src="{% static 'audio/Perfect.mp3' %}" type="audio/mp3">
+                            </audio>
+
+                            <script>
+                                var j = document.getElementById("audio10");
+
+                                function playAudio10()
+                                {
+                                    j.play();
+                                }
+
+                                function pauseAudio10()
+                                {
+                                    j.pause();
+                                }
+                            </script>
+
+<button class="openbtn" onclick="openNav10()">☰</button>  
+&nbsp;&nbsp;Length: 00:03:48 <!--end--> <br><br>
+
+                              <!--song 11-->
+                        <i class="fa fa-play-circle fa-2x" aria-hidden="true">&nbsp;&nbsp;<img src="{% static 'images/photos/monster.jpg' %}" height="55" width="55">&nbsp;&nbsp;<strong id="monster" id="play11" id="pause11">Monster</strong></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        
+
+<div id="mySidepanel11" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav11()">×</a>
+  <a href="#play11" onclick="playAudio11()">Play</a>
+  <a href="#pause11" onclick="pauseAudio11()">Pause</a>
+  <a href="{% static 'audio/Monster.mp3' %}" download>Download</a>
+</div>
+
+                            <audio id="audio11">
+                                    <source src="{% static 'audio/Monster.mp3' %}" type="audio/mp3">
+                            </audio>
+
+                            <script>
+                                var k = document.getElementById("audio11");
+
+                                function playAudio11()
+                                {
+                                    k.play();
+                                }
+
+                                function pauseAudio11()
+                                {
+                                    k.pause();
+                                }
+                            </script>
+
+<button class="openbtn" onclick="openNav11()">☰</button>  
+&nbsp;&nbsp;Length: 00:04:14 <!--end--> <br><br><hr>
+
+
+
+
+<!--search-->
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script> <!--end-->
+
+<!--collapsed sidepanel song 1-->
+<script>
+function openNav1() {
+  document.getElementById("mySidepanel1").style.width = "250px";
+}
+
+function closeNav1() {
+  document.getElementById("mySidepanel1").style.width = "0";
+}
+</script> <!--end-->
+
+<!--collapsed sidepanel song 2-->
+<script>
+function openNav2() {
+  document.getElementById("mySidepanel2").style.width = "250px";
+}
+
+function closeNav2() {
+  document.getElementById("mySidepanel2").style.width = "0";
+}
+</script> <!--end-->
+
+<!--collapsed sidepanel song 3-->
+<script>
+function openNav3() {
+  document.getElementById("mySidepanel3").style.width = "250px";
+}
+
+function closeNav3() {
+  document.getElementById("mySidepanel3").style.width = "0";
+}
+</script> <!--end-->
+
+<!--collapsed sidepanel song 4-->
+<script>
+function openNav4() {
+  document.getElementById("mySidepanel4").style.width = "250px";
+}
+
+function closeNav4() {
+  document.getElementById("mySidepanel4").style.width = "0";
+}
+</script> <!--end-->
+
+<!--collapsed sidepanel song 5-->
+<script>
+function openNav5() {
+  document.getElementById("mySidepanel5").style.width = "250px";
+}
+
+function closeNav5() {
+  document.getElementById("mySidepanel5").style.width = "0";
+}
+</script> <!--end-->
+
+<!--collapsed sidepanel song 6-->
+<script>
+function openNav6() {
+  document.getElementById("mySidepanel6").style.width = "250px";
+}
+
+function closeNav6() {
+  document.getElementById("mySidepanel6").style.width = "0";
+}
+</script> <!--end-->
+
+<!--collapsed sidepanel song 7-->
+<script>
+function openNav7() {
+  document.getElementById("mySidepanel7").style.width = "250px";
+}
+
+function closeNav7() {
+  document.getElementById("mySidepanel7").style.width = "0";
+}
+</script> <!--end-->
+
+<!--collapsed sidepanel song 8-->
+<script>
+function openNav8() {
+  document.getElementById("mySidepanel8").style.width = "250px";
+}
+
+function closeNav8() {
+  document.getElementById("mySidepanel8").style.width = "0";
+}
+</script> <!--end-->
+
+<!--collapsed sidepanel song 9-->
+<script>
+function openNav9() {
+  document.getElementById("mySidepanel9").style.width = "250px";
+}
+
+function closeNav9() {
+  document.getElementById("mySidepanel9").style.width = "0";
+}
+</script> <!--end-->
+
+<!--collapsed sidepanel song 10-->
+<script>
+function openNav10() {
+  document.getElementById("mySidepanel10").style.width = "250px";
+}
+
+function closeNav10() {
+  document.getElementById("mySidepanel10").style.width = "0";
+}
+</script> <!--end-->
+
+<!--collapsed sidepanel song 11-->
+<script>
+function openNav11() {
+  document.getElementById("mySidepanel11").style.width = "250px";
+}
+
+function closeNav11() {
+  document.getElementById("mySidepanel11").style.width = "0";
+}
+</script> <!--end-->
+
+
+</div>
+</section>
+
+{% endblock %}

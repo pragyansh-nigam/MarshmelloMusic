@@ -1,0 +1,63 @@
+{% extends 'default.html' %}
+{% load static %}
+
+{% block content %}
+
+<section id="about">
+        <div class="container">
+
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">videos</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4 wow fadeInLeft">
+                    <h3 class="column-title">BIBA ft. Shah Rukh Khan</h3>
+                    <!-- 16:9 aspect ratio -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <video id="vd1">
+                        	<source src="{% static 'videos/v1.mp4' %}" type="video/mp4">
+                        </video>
+
+                        <script>
+                                var v = document.getElementById("vd1");
+
+                                function playVideo()
+                                {
+                                    v.play();
+                                }
+
+                                function pauseVideo()
+                                {
+                                    v.pause();
+                                }
+                        </script>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-4 wow fadeInLeft">
+                    <h3 class="column-title">BIBA ft. Shah Rukh Khan</h3>
+                    <!-- 16:9 aspect ratio -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <video controls>
+                        	<source src="{% static 'videos/v2.mp4' %}" type="video/mp4">
+                        </video>
+                	</div>
+                </div>
+
+                <div class="col-sm-4 wow fadeInLeft">
+                    <h3 class="column-title">BIBA ft. Shah Rukh Khan</h3>
+                    <!-- 16:9 aspect ratio -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src="{% static 'videos/v1.mp4' %}" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                    </div> <br> 
+                </div>  
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-primary" onclick="playVideo()" type="button">PLAY NOW</button> &nbsp;&nbsp;
+                <button class="btn btn-primary" onclick="pauseVideo()" type="button">PAUSE</button>
+            </div>
+        </div>
+    </section><!--/#about-->
+
+{% endblock %}

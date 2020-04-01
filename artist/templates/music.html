@@ -1,0 +1,292 @@
+{% extends 'default.html' %}
+{% load static %}
+
+{% block content %}
+
+   <section id="meet-team">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">popular</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
+                        <div class="team-img">
+                            <img class="img-responsive img-circle" src="{% static 'images/photos/p (1).jpg' %}" height="280" width="263" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>Silence</h3>
+                            <span>90,717,746</span>
+                        </div>
+                        <p>Silence (Slushii Remix) * 2017</p>
+                        <br>
+                        <button class="btn btn-primary" onclick="playAudio()" type="button">PLAY NOW</button> &nbsp;&nbsp;
+                        <button class="btn btn-primary" onclick="pauseAudio()" type="button">PAUSE</button>
+
+                            <audio id="audio1">
+                                    <source src="{% static 'audio/silence.mp3' %}" type="audio/mp3">
+                            </audio>
+
+                            <script>
+                                var a = document.getElementById("audio1");
+
+                                function playAudio()
+                                {
+                                    a.play();
+                                }
+
+                                function pauseAudio()
+                                {
+                                    a.pause();
+                                }
+                            </script>
+
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
+                        <div class="team-img">
+                            <img class="img-responsive img-circle" src="{% static 'images/photos/p (1).png' %}" height="280" width="263" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>Happier</h3>
+                            <span>908,094,301</span>
+                        </div>
+                        <p>Happier * 2018</p>
+                        <br>
+                        <button class="btn btn-primary" onclick="playAud()" type="button">PLAY NOW</button> &nbsp;&nbsp;
+                        <button class="btn btn-primary" onclick="pauseAud()" type="button">PAUSE</button>
+
+                            <audio id="myaudio">
+                                    <source src="{% static 'audio/happier.mp3' %}" type="audio/mp3">
+                            </audio>
+
+                            <script>
+                                var aud = document.getElementById("myaudio");
+
+                                function playAud()
+                                {
+                                    aud.play();
+                                }
+
+                                function pauseAud()
+                                {
+                                    aud.pause();
+                                }
+                            </script>
+
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="200ms">
+                        <div class="team-img">
+                            <img class="img-responsive img-circle" src="{% static 'images/photos/p (2).png' %}" height="280" width="263" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>Here With Me</h3>
+                            <span>247,421,628</span>
+                        </div>
+                        <p>Here With Me * 2019</p>
+                        <br>
+                        <button class="btn btn-primary" onclick="p1()" type="button">PLAY NOW</button> &nbsp;&nbsp;
+                        <button class="btn btn-primary" onclick="p2()" type="button">PAUSE</button>
+
+                            <audio id="audio2">
+                                    <source src="{% static 'audio/here with me.mp3' %}" type="audio/mp3">
+                            </audio>
+
+                            <script>
+                                var audio2 = document.getElementById("audio2");
+
+                                function p1()
+                                {
+                                    audio2.play();
+                                }
+
+                                function p2()
+                                {
+                                    audio2.pause();
+                                }
+                            </script>
+
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="300ms">
+                        <div class="team-img">
+                            <img class="img-responsive img-circle" src="{% static 'images/photos/p (14).jpg' %}" height="280" width="263" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>Friends</h3>
+                            <span>767,974,757</span>
+                        </div>
+                        <p>Speak Your Mind * 2018</p>
+                        <br>
+                        <button class="btn btn-primary" onclick="play()" type="button">PLAY NOW</button> &nbsp;&nbsp;
+                        <button class="btn btn-primary" onclick="pause()" type="button">PAUSE</button>
+
+                            <audio id="audio">
+                                    <source src="{% static 'audio/friends.mp3' %}" type="audio/mp3">
+                            </audio>
+
+                            <script>
+                                var audio = document.getElementById("audio");
+
+                                function play()
+                                {
+                                    audio.play();
+                                }
+
+                                function pause()
+                                {
+                                    audio.pause();
+                                }
+                            </script>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="row">
+
+                <div class="col-sm-4">
+                    <h3 class="column-title">More Songs</h3>
+                    <div role="tabpanel">
+                        <ul class="nav main-tab nav-justified" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#tab1" role="tab" data-toggle="tab" aria-controls="tab1" aria-expanded="true">2010</a>
+                            
+                            <li role="presentation">
+                                <a href="#tab2" role="tab" data-toggle="tab" aria-controls="tab2" aria-expanded="false">2011</a>
+                            
+                            <li role="presentation">
+                                <a href="#tab3" role="tab" data-toggle="tab" aria-controls="tab3" aria-expanded="false">2013</a>
+                            
+                            <li role="presentation">
+                                <a href="#tab4" role="tab" data-toggle="tab" aria-controls="tab4" aria-expanded="false">2014</a>
+                            
+                        </ul>
+                        <div id="tab-content" class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade active in" id="tab1" aria-labelledby="tab1">
+                                <p>1. 18 - One Direction</p>
+                                <audio controls>
+                                    <source src="{% static 'audio/18.mp3' %}" type="audio/mp3">
+                                </audio> 
+                                <p>2. Bebot - The Black Eyed Peas</p>
+                                <audio controls>
+                                    <source src="{% static 'audio/Bebot.mp3' %}" type="audio/mp3">
+                                </audio> 
+                                <p>3. Closer - The Chainsmokers</p>
+                                <audio controls>
+                                    <source src="{% static 'audio/Closer.mp3' %}" type="audio/mp3">
+                                </audio>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="tab2" aria-labelledby="tab2">
+                                <p>1. Cold - Maroon 5</p>
+                                <audio controls>
+                                    <source src="{% static 'audio/Cold.mp3' %}" type="audio/mp3">
+                                </audio>
+                                <p>2. Despacito - Louis Fonsi & Daddy Yankee</p>
+                                <audio controls>
+                                    <source src="{% static 'audio/Despacito.mp3' %}" type="audio/mp3">
+                                </audio>
+                                <p>3. Don't Let Me Down - The Chainsmokers</p>
+                                <audio controls>
+                                    <source src="{% static 'audio/Dont let me down.mp3' %}" type="audio/mp3">
+                                </audio>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="tab3" aria-labelledby="tab3">
+                                <p>1. Love Me Like You Do - Ellie Goulding</p>
+                                <audio controls>
+                                    <source src="{% static 'audio/Love me like you do.mp3' %}" type="audio/mp3">
+                                </audio>
+                                <p>2. Monster</p>
+                                <audio controls>
+                                    <source src="{% static 'audio/Monster.mp3' %}" type="audio/mp3">
+                                </audio>
+                                <p>3. Perfect - One Direction</p>
+                                <audio controls>
+                                    <source src="{% static 'audio/Perfect.mp3' %}" type="audio/mp3">
+                                </audio>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="tab4" aria-labelledby="tab3">
+                                <p>1. See You Again - Wiz Khalifa, Charlie Puth</p>
+                                <audio controls>
+                                    <source src="{% static 'audio/See you again.mp3' %}" type="audio/mp3">
+                                </audio>
+                                <p>2. Steal My Girl - One Direction</p>
+                                <audio controls>
+                                    <source src="{% static 'audio/Steal my girl.mp3' %}" type="audio/mp3">
+                                </audio>
+                                <p>3. Titanium - David Guetta</p>
+                                <audio controls>
+                                    <source src="{% static 'audio/Titanium.mp3' %}" type="audio/mp3">
+                                </audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-sm-4">
+                    <h3 class="column-title">Milestones</h3>
+                    <strong>Followers</strong>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-primary" role="progressbar" data-width="90">85%</div>
+                    </div>
+                    <strong>Fans</strong>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-primary" role="progressbar" data-width="85">70%</div>
+                    </div>
+                    <strong>Active Listeners</strong>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-primary" role="progressbar" data-width="95">90%</div>
+                    </div>
+                    <strong>Songs</strong>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-primary" role="progressbar" data-width="78">65%</div>
+                    </div> <br><br>
+                    
+                </div>
+
+                <div class="col-sm-4">
+                    <h3 class="column-title">Artist's Pick</h3>
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Mello Gaming
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="panel-body">
+                                    <a href="/artist/music"><img src="{% static 'images/photos/ss (4).png' %}" height="210" width="210" title="Mello Gaming"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Spotify Music
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    <a href="/artist/spotify"><img src="{% static 'images/photos/spotify.png' %}" title="Spotify" height="45" width="148"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section><!--/#meet-team-->
+    
+{% endblock %}

@@ -1,0 +1,87 @@
+{% extends 'default.html' %}
+{% load static %}
+
+{% block content %}
+
+<section id="main-slider">
+        <div class="owl-carousel">
+            <div class="item" style="background-image: url({% static 'images/slider/bg3.jpg' %});" >
+                <div class="slider-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h2><span>hola</span> amigos!</h2>
+                                    <p>Be happy, be healthy, make others happy, live freely, do not be bound by rules, love your family and don't eat too much marshmallows.</p>
+                                    <a class="btn btn-primary btn-lg" href="/artist/bio">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.item-->
+             <div class="item" style="background-image: url({% static 'images/slider/bg4.jpg' %});">
+                <div class="slider-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h2>hola <span>amigos!</span></h2>
+                                    <p>Be happy, be healthy, make others happy, live freely, do not be bound by rules, love your family and don't eat too much marshmallows.</p>
+                                    <a class="btn btn-primary btn-lg" href="/artist/bio">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.item-->
+        </div><!--/.owl-carousel-->
+    </section><!--/#main-slider-->
+
+    <br><br>
+
+<section id="home">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">HOME</h2>
+                <p class="text-center wow fadeInDown">Be happy, be healthy, make others happy, live freely, do not be bound by rules,<br>love your family and don't eat too much marshmallows.</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 wow fadeInLeft">
+                    <img class="img-responsive" src="{% static 'images/photos/img2.jpg' %}" alt="">
+                </div>
+                <div class="col-sm-6">
+                <pre>
+                	<h4 class="section-title text-center wow fadeInDown">LATEST RELEASE</h4>
+                	<img align="center" src="{% static 'images/photos/p (13).jpg' %}" height="166" width="200" alt=''>
+                
+                 <span style="font-family:vardana;"><b>1. Maid With The Flaxen Hair</b></span>	
+                 <audio controls>
+                    <source src="{% static 'audio/Maid with the Flaxen Hair.mp3' %}" type="audio/mp3">
+                 </audio>
+                 <span style="font-family:vardana;"><b>2. Kalimba</b></span>
+                 <audio controls>
+                    	<source src="{% static 'audio/Kalimba.mp3' %}" type="audio/mp3">
+                 </audio>
+                 <span style="font-family:vardana;"><b>3. Sleep Away</b></span>
+                 <audio controls>	
+                    	<source src="{% static 'audio/Sleep Away.mp3' %}" type="audio/mp3">
+                 </audio>
+                </pre>
+                </div>
+            </div>
+        </div>
+    </section> <br>
+
+    <section id="cta2" style="background-image: url({% static 'images/photos/cta2-bg.jpg' %});">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">MARSHMELLO <span>MUSIC</span></h2>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">ARTIST RADIO - Marshmello and other artists.</p>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms"><a class="btn btn-primary btn-lg" href="/artist/spotify">Play Radio</a></p>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}
